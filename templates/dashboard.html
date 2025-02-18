@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard - Invictus</title>
+</head>
+<body>
+    <h2>Welcome, {{ username }}</h2>
+    <p>Current streak: {{ streak }} day(s)</p>
+    <p>Pushups: {{ pushups }}/100</p>
+    <p>Situps: {{ situps }}/100</p>
+    <p>Squats: {{ squats }}/100</p>
+
+    <h3>Update Progress</h3>
+    <form method="post">
+        <input type="number" name="pushups" placeholder="Pushups" min="0"><br>
+        <input type="number" name="situps" placeholder="Situps" min="0"><br>
+        <input type="number" name="squats" placeholder="Squats" min="0"><br>
+        <button type="submit">Update</button>
+    </form>
+    <br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
